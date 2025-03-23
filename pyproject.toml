@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "speech"
-version = "0.1.0"
+version = "1.0.0"
 description = "This module generates text-to-speech strings optimized for compatibility with a variety of screen reader software."
 authors = [
     { name = "ACT Laboratory", email = "support@actlab.org" }
