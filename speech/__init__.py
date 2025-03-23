@@ -12,8 +12,8 @@ import types
 def load_library(libname, cdll=False):
 	if hasattr(sys,"frozen"):
 		if sys.version_info.major>=3 and sys.version_info.minor>=8:
-			os.add_dll_directory(os.path.join(sys._MEIPASS, 'accessible_output2', 'lib'))
-		libfile = os.path.join(sys._MEIPASS, 'accessible_output2', 'lib', libname)
+			os.add_dll_directory(os.path.join(sys._MEIPASS, 'speech', 'lib'))
+		libfile = os.path.join(sys._MEIPASS, 'speech', 'lib', libname)
 	else:
 		import inspect
 		module_path=os.path.abspath(os.path.dirname(inspect.getmodule(inspect.stack()[0][0]).__file__))
@@ -40,5 +40,5 @@ def find_datafiles():
 		return []
 	path = os.path.join(accessible_output2.__path__[0], 'lib', '*.dll')
 	results = glob(path)
-	dest_dir = os.path.join('accessible_output2', 'lib')
+	dest_dir = os.path.join('speech', 'lib')
 	return [(dest_dir, results)]
